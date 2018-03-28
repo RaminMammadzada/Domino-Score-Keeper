@@ -32,36 +32,52 @@ public class MainActivity extends AppCompatActivity {
 
     Button nextRoundButton;
 
-    ImageView tile00;
-    ImageView tile01;
-    ImageView tile02;
-    ImageView tile03;
-    ImageView tile04;
-    ImageView tile05;
-    ImageView tile06;
-    ImageView tile11;
-    ImageView tile12;
-    ImageView tile13;
-    ImageView tile14;
-    ImageView tile15;
-    ImageView tile16;
-    ImageView tile22;
-    ImageView tile23;
-    ImageView tile24;
-    ImageView tile25;
-    ImageView tile26;
-    ImageView tile33;
-    ImageView tile34;
-    ImageView tile35;
-    ImageView tile36;
-    ImageView tile44;
-    ImageView tile45;
-    ImageView tile46;
-    ImageView tile55;
-    ImageView tile56;
-    ImageView tile66;
+    ImageView dominoTile00 = findViewById( R.id.tile00 );
+    ImageView dominoTile01 = findViewById( R.id.tile01 );
+    ImageView dominoTile02 = findViewById( R.id.tile02 );
+    ImageView dominoTile03 = findViewById( R.id.tile03 );
+    ImageView dominoTile04 = findViewById( R.id.tile04 );
+    ImageView dominoTile05 = findViewById( R.id.tile05 );
+    ImageView dominoTile06 = findViewById( R.id.tile06 );
+    ImageView dominoTile11 = findViewById( R.id.tile11 );
+    ImageView dominoTile12 = findViewById( R.id.tile12 );
+    ImageView dominoTile13 = findViewById( R.id.tile13 );
+    ImageView dominoTile14 = findViewById( R.id.tile14 );
+    ImageView dominoTile15 = findViewById( R.id.tile15 );
+    ImageView dominoTile16 = findViewById( R.id.tile16 );
+    ImageView dominoTile22 = findViewById( R.id.tile22 );
+    ImageView dominoTile23 = findViewById( R.id.tile23 );
+    ImageView dominoTile24 = findViewById( R.id.tile24 );
+    ImageView dominoTile25 = findViewById( R.id.tile25 );
+    ImageView dominoTile26 = findViewById( R.id.tile26 );
+    ImageView dominoTile33 = findViewById( R.id.tile33 );
+    ImageView dominoTile34 = findViewById( R.id.tile34 );
+    ImageView dominoTile35 = findViewById( R.id.tile35 );
+    ImageView dominoTile36 = findViewById( R.id.tile36 );
+    ImageView dominoTile44 = findViewById( R.id.tile44 );
+    ImageView dominoTile45 = findViewById( R.id.tile45 );
+    ImageView dominoTile46 = findViewById( R.id.tile46 );
+    ImageView dominoTile55 = findViewById( R.id.tile55 );
+    ImageView dominoTile56 = findViewById( R.id.tile56 );
+    ImageView dominoTile66 = findViewById( R.id.tile66 );
 
+    View.OnClickListener dominoTileListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if(v.getId() == R.id.tile00) {
+                Toast.makeText(MainActivity.this, "00 is pressed", Toast.LENGTH_SHORT).show();
+            }
 
+            if(v.getId() == R.id.tile01) {
+                Toast.makeText(MainActivity.this, "01 is pressed", Toast.LENGTH_SHORT).show();
+            }
+
+            if(v.getId() == R.id.tile02) {
+                Toast.makeText(MainActivity.this, "02 is pressed", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+    };
 
 
     @Override
@@ -79,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         } else if(roundScoreTeamA < roundScoreTeamB) {
             Toast.makeText(this, "Team B wins!", Toast.LENGTH_SHORT).show();
         }
-
 
         // Team A staffs
         handEndedForTeamA = findViewById(R.id.hand_ended_for_teamA);
@@ -143,9 +158,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
+        dominoTile00.setOnClickListener( dominoTileListener);
+        dominoTile01.setOnClickListener( dominoTileListener);
+        dominoTile02.setOnClickListener( dominoTileListener);
+        dominoTile03.setOnClickListener( dominoTileListener);
+        dominoTile04.setOnClickListener( dominoTileListener);
+        dominoTile05.setOnClickListener( dominoTileListener);
+        dominoTile06.setOnClickListener( dominoTileListener);
+        dominoTile11.setOnClickListener( dominoTileListener);
+        dominoTile12.setOnClickListener( dominoTileListener);
+        dominoTile13.setOnClickListener( dominoTileListener);
+        dominoTile14.setOnClickListener( dominoTileListener);
+        dominoTile15.setOnClickListener( dominoTileListener);
+        dominoTile16.setOnClickListener( dominoTileListener);
+        dominoTile22.setOnClickListener( dominoTileListener);
+        dominoTile23.setOnClickListener( dominoTileListener);
+        dominoTile24.setOnClickListener( dominoTileListener);
+        dominoTile25.setOnClickListener( dominoTileListener);
+        dominoTile26.setOnClickListener( dominoTileListener);
+        dominoTile33.setOnClickListener( dominoTileListener);
+        dominoTile34.setOnClickListener( dominoTileListener);
+        dominoTile35.setOnClickListener( dominoTileListener);
+        dominoTile36.setOnClickListener( dominoTileListener);
+        dominoTile44.setOnClickListener( dominoTileListener);
+        dominoTile45.setOnClickListener( dominoTileListener);
+        dominoTile46.setOnClickListener( dominoTileListener);
+        dominoTile55.setOnClickListener( dominoTileListener);
+        dominoTile56.setOnClickListener( dominoTileListener);
+        dominoTile66.setOnClickListener( dominoTileListener);
 
     }
 
