@@ -63,16 +63,16 @@ public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener dominoTileListener = new View.OnClickListener() {
         @Override
-        public void onClick(View v) {
-            if(v.getId() == R.id.tile00) {
+        public void onClick(View view) {
+            if(view.getId() == R.id.tile00) {
                 Toast.makeText(MainActivity.this, "00 is pressed", Toast.LENGTH_SHORT).show();
             }
 
-            if(v.getId() == R.id.tile01) {
+            if(view.getId() == R.id.tile01) {
                 Toast.makeText(MainActivity.this, "01 is pressed", Toast.LENGTH_SHORT).show();
             }
 
-            if(v.getId() == R.id.tile02) {
+            if(view.getId() == R.id.tile02) {
                 Toast.makeText(MainActivity.this, "02 is pressed", Toast.LENGTH_SHORT).show();
             }
 
