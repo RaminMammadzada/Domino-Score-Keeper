@@ -5,11 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorForBackground"
-    tools:context="com.example.android.scorekeeper.MainActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    tools:context="com.example.android.dominoscorekeeper.MainActivity"
+    android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/main_layout"
@@ -23,24 +20,55 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your name"/>
 
-                <TextView
-                    android:id="@+id/team_a_score"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="16dp"
-                    android:text="0"
-                    android:textSize="56sp"
-                    android:textColor="#000000"
-                    android:fontFamily="sans-serif-condensed"/>
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textSize="56sp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-condensed"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total score: "
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/team_a_total_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textSize="18sp"
+                            android:textColor="#000000"
+                            android:fontFamily="sans-serif-condensed"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/during_game_layout_teamA"
@@ -132,7 +160,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <include layout="@layout/domino_piles_layout_team_a" />
+                    <include layout="@layout/domino_piles_layout" />
 
                 </LinearLayout>
 
@@ -143,24 +171,55 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your name"/>
 
-                <TextView
-                    android:id="@+id/team_b_score"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="16dp"
-                    android:text="0"
-                    android:textSize="56sp"
-                    android:textColor="#000000"
-                    android:fontFamily="sans-serif-condensed"/>
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textSize="56sp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif-condensed"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total score: "
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/team_b_total_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textSize="18sp"
+                            android:textColor="#000000"
+                            android:fontFamily="sans-serif-condensed"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/during_game_layout_teamB"
@@ -250,24 +309,35 @@
                     android:id="@+id/domino_piles_selection_teamB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <include layout="@layout/domino_piles_layout_team_b"/>
+                    <include layout="@layout/domino_piles_layout"/>
                 </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/reset_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="resetAll"
-            android:text="reset"
-            android:textAllCaps="true"
-            android:layout_margin="5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="resetAll"
+                android:text="reset"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"/>
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/next_round_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:onClick="resetAll"
+                android:text="next round"
+                android:textAllCaps="true" />
+
+        </RelativeLayout>
 
 </LinearLayout>

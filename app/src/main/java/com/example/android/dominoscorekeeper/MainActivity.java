@@ -1,4 +1,4 @@
-package com.example.android.scorekeeper;
+package com.example.android.dominoscorekeeper;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,8 +14,11 @@ import android.widget.Toast;
 import com.example.android.dominoscorekeeper.R;
 
 public class MainActivity extends AppCompatActivity {
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
+    int roundScoreTeamA = 0;
+    int roundScoreTeamB = 0;
+
+    int totalScoreTeamA = 0;
+    int totalScoreTeamB = 0;
 
     Button handEndedForTeamA;
     LinearLayout whenGameEndsTeamAWins;
@@ -26,18 +30,56 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout whenGameEndsTeamBWins;
     LinearLayout whenGameEndsTeamBLost;
 
+    Button nextRoundButton;
+
+    ImageView tile00;
+    ImageView tile01;
+    ImageView tile02;
+    ImageView tile03;
+    ImageView tile04;
+    ImageView tile05;
+    ImageView tile06;
+    ImageView tile11;
+    ImageView tile12;
+    ImageView tile13;
+    ImageView tile14;
+    ImageView tile15;
+    ImageView tile16;
+    ImageView tile22;
+    ImageView tile23;
+    ImageView tile24;
+    ImageView tile25;
+    ImageView tile26;
+    ImageView tile33;
+    ImageView tile34;
+    ImageView tile35;
+    ImageView tile36;
+    ImageView tile44;
+    ImageView tile45;
+    ImageView tile46;
+    ImageView tile55;
+    ImageView tile56;
+    ImageView tile66;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(0);
+        displayRoundScoreForTeamA(0);
+
+        nextRoundButton = findViewById(R.id.next_round_button);
+        nextRoundButton.setVisibility(View.GONE);
 
         // This if statement check win team is winning the game.
-        if(scoreTeamA > scoreTeamB){
+        if(roundScoreTeamA > roundScoreTeamB){
             Toast.makeText(this, "Team A wins!", Toast.LENGTH_SHORT).show();
-        } else if(scoreTeamA < scoreTeamB) {
+        } else if(roundScoreTeamA < roundScoreTeamB) {
             Toast.makeText(this, "Team B wins!", Toast.LENGTH_SHORT).show();
         }
+
 
         // Team A staffs
         handEndedForTeamA = findViewById(R.id.hand_ended_for_teamA);
@@ -101,57 +143,77 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
     }
 
     // calculation and display for team A
 
     public void addFiveForTeamA(View v){
-        scoreTeamA +=5;
-        displayForTeamA(scoreTeamA);
+        roundScoreTeamA +=5;
+        totalScoreTeamA +=5;
+        displayRoundScoreForTeamA(roundScoreTeamA);
+        displayTotalScoreForTeamA(totalScoreTeamA);
     }
 
     public void addTenForTeamA(View v){
-        scoreTeamA +=10;
-        displayForTeamA(scoreTeamA);
+        roundScoreTeamA +=10;
+        totalScoreTeamA +=10;
+        displayRoundScoreForTeamA(roundScoreTeamA);
+        displayTotalScoreForTeamA(totalScoreTeamA);
     }
 
     public void addFifteenForTeamA(View v){
-        scoreTeamA +=15;
-        displayForTeamA(scoreTeamA);
+        roundScoreTeamA +=15;
+        totalScoreTeamA +=15;
+        displayRoundScoreForTeamA(roundScoreTeamA);
+        displayTotalScoreForTeamA(totalScoreTeamA);
     }
 
     public void addTwentyForTeamA(View v){
-        scoreTeamA +=20;
-        displayForTeamA(scoreTeamA);
+        roundScoreTeamA +=20;
+        totalScoreTeamA +=20;
+        displayRoundScoreForTeamA(roundScoreTeamA);
+        displayTotalScoreForTeamA(totalScoreTeamA);
     }
     // calculation and display for team B
 
     public void addFiveForTeamB(View v){
-        scoreTeamB +=5;
-        displayForTeamB(scoreTeamB);
+        roundScoreTeamB +=5;
+        totalScoreTeamB +=5;
+        displayRoundScoreForTeamB(roundScoreTeamB);
+        displayTotalScoreForTeamB(totalScoreTeamB);
     }
 
     public void addTenForTeamB(View v){
-        scoreTeamB +=10;
-        displayForTeamB(scoreTeamB);
+        roundScoreTeamB +=10;
+        totalScoreTeamB +=10;
+        displayRoundScoreForTeamB(roundScoreTeamB);
+        displayTotalScoreForTeamB(totalScoreTeamB);
     }
 
     public void addFifteenForTeamB(View v){
-        scoreTeamB +=15;
-        displayForTeamB(scoreTeamB);
+        roundScoreTeamB +=15;
+        totalScoreTeamB +=15;
+        displayRoundScoreForTeamB(roundScoreTeamB);
+        displayTotalScoreForTeamB(totalScoreTeamB);
     }
 
     public void addTwentyForTeamB(View v){
-        scoreTeamB +=20;
-        displayForTeamB(scoreTeamB);
+        roundScoreTeamB +=20;
+        totalScoreTeamB +=20;
+        displayRoundScoreForTeamB(roundScoreTeamB);
+        displayTotalScoreForTeamB(totalScoreTeamB);
     }
 
     // reset function
     public void resetAll( View v){
-        scoreTeamA = 0;
-        scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        roundScoreTeamA = 0;
+        roundScoreTeamB = 0;
+        displayRoundScoreForTeamA(roundScoreTeamA);
+        displayRoundScoreForTeamB(roundScoreTeamB);
         handEndedForTeamA.setVisibility(View.VISIBLE);
         handEndedForTeamB.setVisibility(View.VISIBLE);
         whenGameEndsTeamAWins.setVisibility(View.GONE);
@@ -164,18 +226,38 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given round score for Team A.
      */
-    public void displayForTeamA(int score) {
+    public void displayRoundScoreForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
     /**
-     * Displays the given score for Team B.
+     * Displays the given round score for Team B.
      */
-    public void displayForTeamB(int score) {
+    public void displayRoundScoreForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the given the total score for Team A.
+     */
+    public void displayTotalScoreForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_a_total_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
+     * Displays the given the total score for Team B.
+     */
+    public void displayTotalScoreForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_total_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    public void winnerTeamACollectsOpponentsHand(){
+
     }
 }
