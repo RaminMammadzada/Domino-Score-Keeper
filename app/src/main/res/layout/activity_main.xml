@@ -30,24 +30,54 @@
                     android:hint="Enter your name"/>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_horizontal">
-
-                    <TextView
-                        android:id="@+id/team_a_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="0"
-                        android:textSize="56sp"
-                        android:textColor="#000000"
-                        android:fontFamily="sans-serif-condensed"/>
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Round " />
+
+                            <TextView
+                                android:id="@+id/round_number_team_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" " />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" score: " />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/team_a_round_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="56sp"
+                            android:textColor="#000000"
+                            android:fontFamily="sans-serif-condensed"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -55,17 +85,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Total score: "
-                            android:textSize="16sp"/>
+                            android:layout_gravity="center"
+                            android:textSize="16sp" />
+
+
                         <TextView
                             android:id="@+id/team_a_total_score"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
+                            android:gravity="center"
                             android:text="0"
                             android:textSize="18sp"
                             android:textColor="#000000"
                             android:fontFamily="sans-serif-condensed"/>
+
                     </LinearLayout>
+
 
 
                 </LinearLayout>
@@ -185,24 +220,54 @@
                     android:hint="Enter your name"/>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_horizontal">
-
-                    <TextView
-                        android:id="@+id/team_b_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:gravity="center_horizontal"
-                        android:text="0"
-                        android:textSize="56sp"
-                        android:textColor="#000000"
-                        android:fontFamily="sans-serif-condensed"/>
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Round " />
+
+                            <TextView
+                                android:id="@+id/round_number_team_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" " />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" score: " />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/team_b_round_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="56sp"
+                            android:textColor="#000000"
+                            android:fontFamily="sans-serif-condensed"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -210,17 +275,22 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Total score: "
-                            android:textSize="16sp"/>
+                            android:layout_gravity="center"
+                            android:textSize="16sp" />
+
+
                         <TextView
                             android:id="@+id/team_b_total_score"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="5dp"
+                            android:gravity="center"
                             android:text="0"
                             android:textSize="18sp"
                             android:textColor="#000000"
                             android:fontFamily="sans-serif-condensed"/>
+
                     </LinearLayout>
+
 
 
                 </LinearLayout>

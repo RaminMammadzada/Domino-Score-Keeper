@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     int totalScoreTeamA = 0;
     int totalScoreTeamB = 0;
 
+    int opponentsHandForTeamA = 0;
+    int opponentsHandForTeamB = 0;
+
     Button handEndedForTeamA;
     LinearLayout whenGameEndsTeamAWins;
     LinearLayout whenGameEndsTeamALost;
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button nextRoundButton;
 
-    // Image view decleration for Team A domino Tiles
+    // Image view declaration for Team A domino Tiles
     ImageView teamADominoTile00;
     ImageView teamADominoTile01;
     ImageView teamADominoTile02;
@@ -182,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-    // Image view decleration for Team B domino Tiles
+    // Image view declaration for Team B domino Tiles
     ImageView teamBDominoTile00;
     ImageView teamBDominoTile01;
     ImageView teamBDominoTile02;
@@ -339,6 +342,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         displayRoundScoreForTeamA(0);
 
+        // It will be used to go to the next round
         nextRoundButton = findViewById(R.id.next_round_button);
         nextRoundButton.setVisibility(View.GONE);
 
@@ -377,8 +381,7 @@ public class MainActivity extends AppCompatActivity {
                 handEndedForTeamB.setVisibility(View.GONE);
 
                 dominoPilesSelectionTeamA.setVisibility(View.VISIBLE);
-
-
+                winnerTeamACollectsOpponentsHand();
 
             }
         });
@@ -410,6 +413,7 @@ public class MainActivity extends AppCompatActivity {
                 handEndedForTeamB.setVisibility(View.GONE);
 
                 dominoPilesSelectionTeamB.setVisibility(View.VISIBLE);
+                winnerTeamBCollectsOpponentsHand();
 
             }
         });
@@ -622,7 +626,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given round score for Team A.
      */
     public void displayRoundScoreForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = (TextView) findViewById(R.id.team_a_round_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -630,7 +634,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given round score for Team B.
      */
     public void displayRoundScoreForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        TextView scoreView = (TextView) findViewById(R.id.team_b_round_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -650,7 +654,13 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void winnerTeamACollectsOpponentsHand(){
 
+
+    public void winnerTeamACollectsOpponentsHand(){
+        nextRoundButton.setVisibility( View.VISIBLE );
+    }
+
+    public void winnerTeamBCollectsOpponentsHand(){
+        nextRoundButton.setVisibility( View.VISIBLE );
     }
 }
