@@ -51,10 +51,10 @@
                                 android:text="Round " />
 
                             <TextView
-                                android:id="@+id/round_number_team_b"
+                                android:id="@+id/round_number_team_a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=" " />
+                                android:text=" 1 " />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -91,16 +91,32 @@
 
                         <TextView
                             android:id="@+id/team_a_total_score"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="10dp"
                             android:gravity="center"
                             android:text="0"
                             android:textSize="18sp"
                             android:textColor="#000000"
                             android:fontFamily="sans-serif-condensed"/>
+                        <TextView
+                            android:id="@+id/plus_sign_for_team_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:text=" + "/>
+                        <TextView
+                            android:id="@+id/total_of_tiles_in_opponents_hand_for_team_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" 0 "
+                            android:textSize="18sp"
+                            android:textColor="#000000"
+                            android:fontFamily="sans-serif-condensed"
+                            android:visibility="gone"/>
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -241,10 +257,10 @@
                                 android:text="Round " />
 
                             <TextView
-                                android:id="@+id/round_number_team_a"
+                                android:id="@+id/round_number_team_b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=" " />
+                                android:text=" 1 " />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -281,13 +297,30 @@
 
                         <TextView
                             android:id="@+id/team_b_total_score"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="10dp"
                             android:gravity="center"
                             android:text="0"
                             android:textSize="18sp"
                             android:textColor="#000000"
                             android:fontFamily="sans-serif-condensed"/>
+                        <TextView
+                            android:id="@+id/plus_sign_for_team_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:text=" + "/>
+                        <TextView
+                            android:id="@+id/total_of_tiles_in_opponents_hand_for_team_b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" 0 "
+                            android:textSize="18sp"
+                            android:textColor="#000000"
+                            android:fontFamily="sans-serif-condensed"
+                            android:visibility="gone"/>
 
                     </LinearLayout>
 

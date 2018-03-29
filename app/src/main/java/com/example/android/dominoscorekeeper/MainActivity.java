@@ -70,114 +70,119 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener teamADominoTileListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(v.getId() == R.id.team_a_tile_00) {
-                Toast.makeText(MainActivity.this, "00 is pressed", Toast.LENGTH_SHORT).show();
-            }
 
             switch(v.getId()) {
                 case R.id.team_a_tile_00:
-                    Log.e("Tiles ", "00 is pressed");
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 00 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=0;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_01:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 01 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=1;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_02:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 02 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_03:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 03 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_04:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 04 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_05:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 05 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_06:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 06 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_11:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 11 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_12:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 12 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_13:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 13 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_14:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 14 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_15:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 15 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_16:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 16 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_22:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 22 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_23:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 23 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_24:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 24 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_25:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 25 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_26:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 26 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_33:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 33 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_34:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 34 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_35:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 35 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_36:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 36 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_44:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 44 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_45:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 45 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_46:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 46 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_55:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 55 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_56:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 56 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamA +=11;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    break;
                 case R.id.team_a_tile_66:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_a_tile_ 66 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamA +=12;
+                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
                     break;
             }
 
@@ -219,114 +224,119 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener teamBDominoTileListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(v.getId() == R.id.team_b_tile_00) {
-                Toast.makeText(MainActivity.this, "00 is pressed", Toast.LENGTH_SHORT).show();
-            }
 
             switch(v.getId()) {
                 case R.id.team_b_tile_00:
-                    Log.e("Tiles ", "00 is pressed");
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 00 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=0;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_01:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 01 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=1;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_02:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 02 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_03:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 03 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_04:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 04 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_05:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 05 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_06:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 06 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_11:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 11 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_12:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 12 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_13:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 13 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_14:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 14 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_15:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 15 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_16:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 16 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_22:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 22 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_23:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 23 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_24:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 24 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_25:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 25 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_26:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 26 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_33:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 33 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_34:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 34 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_35:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 35 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_36:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 36 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_44:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 44 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_45:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 45 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_46:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 46 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_55:
-                    //Inform the user the button1 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 55 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_56:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 56 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                    opponentsHandForTeamB +=11;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    break;
                 case R.id.team_b_tile_66:
-                    //Inform the user the button2 has been clicked
-                    Toast.makeText( MainActivity.this, "team_b_tile_ 66 is clicker", Toast.LENGTH_SHORT ).show();
+                    opponentsHandForTeamB +=12;
+                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
                     break;
             }
 
@@ -654,7 +664,23 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
+    /**
+     * Displays the total of tiles which still remains in the hand of Team B when
+     * Team A finished all of tiles in its hand and won the round
+     */
+    public void displayTotalOfTilesInOpponentsHandForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.total_of_tiles_in_opponents_hand_for_team_a);
+        scoreView.setText(String.valueOf(score));
+    }
 
+    /**
+     * Displays the total of tiles which still remains in the hand of Team B when
+     * Team A finished all of tiles in its hand and won the round
+     */
+    public void displayTotalOfTilesInOpponentsHandForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.total_of_tiles_in_opponents_hand_for_team_b);
+        scoreView.setText(String.valueOf(score));
+    }
 
     public void winnerTeamACollectsOpponentsHand(){
         nextRoundButton.setVisibility( View.VISIBLE );
