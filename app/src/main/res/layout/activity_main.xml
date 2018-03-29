@@ -82,6 +82,7 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/add_five_for_team_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="addFiveForTeamA"
@@ -89,6 +90,7 @@
                             android:padding="8dp"/>
 
                         <Button
+                            android:id="@+id/add_ten_for_team_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="addTenForTeamA"
@@ -105,6 +107,7 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/add_fifteen_for_team_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="addFifteenForTeamA"
@@ -112,6 +115,7 @@
                             android:padding="8dp"/>
 
                         <Button
+                            android:id="@+id/add_twenty_for_team_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="addTwentyForTeamA"
@@ -160,7 +164,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <include layout="@layout/domino_piles_layout" />
+                    <include layout="@layout/domino_piles_layout_for_team_a" />
 
                 </LinearLayout>
 
@@ -309,7 +313,9 @@
                     android:id="@+id/domino_piles_selection_teamB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <include layout="@layout/domino_piles_layout"/>
+
+                    <include layout="@layout/domino_piles_layout_for_team_b"/>
+
                 </LinearLayout>
 
             </LinearLayout>

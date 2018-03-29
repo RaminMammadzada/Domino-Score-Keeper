@@ -32,52 +32,305 @@ public class MainActivity extends AppCompatActivity {
 
     Button nextRoundButton;
 
-    ImageView dominoTile00 = findViewById( R.id.tile00 );
-    ImageView dominoTile01 = findViewById( R.id.tile01 );
-    ImageView dominoTile02 = findViewById( R.id.tile02 );
-    ImageView dominoTile03 = findViewById( R.id.tile03 );
-    ImageView dominoTile04 = findViewById( R.id.tile04 );
-    ImageView dominoTile05 = findViewById( R.id.tile05 );
-    ImageView dominoTile06 = findViewById( R.id.tile06 );
-    ImageView dominoTile11 = findViewById( R.id.tile11 );
-    ImageView dominoTile12 = findViewById( R.id.tile12 );
-    ImageView dominoTile13 = findViewById( R.id.tile13 );
-    ImageView dominoTile14 = findViewById( R.id.tile14 );
-    ImageView dominoTile15 = findViewById( R.id.tile15 );
-    ImageView dominoTile16 = findViewById( R.id.tile16 );
-    ImageView dominoTile22 = findViewById( R.id.tile22 );
-    ImageView dominoTile23 = findViewById( R.id.tile23 );
-    ImageView dominoTile24 = findViewById( R.id.tile24 );
-    ImageView dominoTile25 = findViewById( R.id.tile25 );
-    ImageView dominoTile26 = findViewById( R.id.tile26 );
-    ImageView dominoTile33 = findViewById( R.id.tile33 );
-    ImageView dominoTile34 = findViewById( R.id.tile34 );
-    ImageView dominoTile35 = findViewById( R.id.tile35 );
-    ImageView dominoTile36 = findViewById( R.id.tile36 );
-    ImageView dominoTile44 = findViewById( R.id.tile44 );
-    ImageView dominoTile45 = findViewById( R.id.tile45 );
-    ImageView dominoTile46 = findViewById( R.id.tile46 );
-    ImageView dominoTile55 = findViewById( R.id.tile55 );
-    ImageView dominoTile56 = findViewById( R.id.tile56 );
-    ImageView dominoTile66 = findViewById( R.id.tile66 );
+    // Image view decleration for Team A domino Tiles
+    ImageView teamADominoTile00;
+    ImageView teamADominoTile01;
+    ImageView teamADominoTile02;
+    ImageView teamADominoTile03;
+    ImageView teamADominoTile04;
+    ImageView teamADominoTile05;
+    ImageView teamADominoTile06;
+    ImageView teamADominoTile11;
+    ImageView teamADominoTile12;
+    ImageView teamADominoTile13;
+    ImageView teamADominoTile14;
+    ImageView teamADominoTile15;
+    ImageView teamADominoTile16;
+    ImageView teamADominoTile22;
+    ImageView teamADominoTile23;
+    ImageView teamADominoTile24;
+    ImageView teamADominoTile25;
+    ImageView teamADominoTile26;
+    ImageView teamADominoTile33;
+    ImageView teamADominoTile34;
+    ImageView teamADominoTile35;
+    ImageView teamADominoTile36;
+    ImageView teamADominoTile44;
+    ImageView teamADominoTile45;
+    ImageView teamADominoTile46;
+    ImageView teamADominoTile55;
+    ImageView teamADominoTile56;
+    ImageView teamADominoTile66;
 
-    View.OnClickListener dominoTileListener = new View.OnClickListener() {
+
+    // OnclickListener for Team A domino tiles after the hand is finished and the time collectiong opponent's hand comes.
+    View.OnClickListener teamADominoTileListener = new View.OnClickListener() {
         @Override
-        public void onClick(View view) {
-            if(view.getId() == R.id.tile00) {
+        public void onClick(View v) {
+            if(v.getId() == R.id.team_a_tile_00) {
                 Toast.makeText(MainActivity.this, "00 is pressed", Toast.LENGTH_SHORT).show();
             }
 
-            if(view.getId() == R.id.tile01) {
-                Toast.makeText(MainActivity.this, "01 is pressed", Toast.LENGTH_SHORT).show();
-            }
-
-            if(view.getId() == R.id.tile02) {
-                Toast.makeText(MainActivity.this, "02 is pressed", Toast.LENGTH_SHORT).show();
+            switch(v.getId()) {
+                case R.id.team_a_tile_00:
+                    Log.e("Tiles ", "00 is pressed");
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 00 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_01:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 01 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_02:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 02 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_03:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 03 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_04:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 04 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_05:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 05 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_06:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 06 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_11:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 11 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_12:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 12 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_13:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 13 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_14:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 14 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_15:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 15 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_16:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 16 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_22:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 22 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_23:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 23 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_24:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 24 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_25:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 25 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_26:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 26 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_33:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 33 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_34:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 34 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_35:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 35 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_36:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 36 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_44:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 44 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_45:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 45 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_46:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 46 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_55:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 55 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_a_tile_56:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 56 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_a_tile_66:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_a_tile_ 66 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
             }
 
         }
     };
+
+
+    // Image view decleration for Team B domino Tiles
+    ImageView teamBDominoTile00;
+    ImageView teamBDominoTile01;
+    ImageView teamBDominoTile02;
+    ImageView teamBDominoTile03;
+    ImageView teamBDominoTile04;
+    ImageView teamBDominoTile05;
+    ImageView teamBDominoTile06;
+    ImageView teamBDominoTile11;
+    ImageView teamBDominoTile12;
+    ImageView teamBDominoTile13;
+    ImageView teamBDominoTile14;
+    ImageView teamBDominoTile15;
+    ImageView teamBDominoTile16;
+    ImageView teamBDominoTile22;
+    ImageView teamBDominoTile23;
+    ImageView teamBDominoTile24;
+    ImageView teamBDominoTile25;
+    ImageView teamBDominoTile26;
+    ImageView teamBDominoTile33;
+    ImageView teamBDominoTile34;
+    ImageView teamBDominoTile35;
+    ImageView teamBDominoTile36;
+    ImageView teamBDominoTile44;
+    ImageView teamBDominoTile45;
+    ImageView teamBDominoTile46;
+    ImageView teamBDominoTile55;
+    ImageView teamBDominoTile56;
+    ImageView teamBDominoTile66;
+
+    // OnclickListener for Team B domino tiles after the hand is finished and the time collectiong opponent's hand comes.
+    View.OnClickListener teamBDominoTileListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if(v.getId() == R.id.team_b_tile_00) {
+                Toast.makeText(MainActivity.this, "00 is pressed", Toast.LENGTH_SHORT).show();
+            }
+
+            switch(v.getId()) {
+                case R.id.team_b_tile_00:
+                    Log.e("Tiles ", "00 is pressed");
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 00 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_01:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 01 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_02:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 02 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_03:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 03 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_04:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 04 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_05:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 05 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_06:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 06 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_11:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 11 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_12:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 12 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_13:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 13 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_14:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 14 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_15:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 15 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_16:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 16 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_22:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 22 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_23:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 23 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_24:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 24 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_25:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 25 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_26:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 26 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_33:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 33 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_34:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 34 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_35:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 35 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_36:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 36 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_44:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 44 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_45:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 45 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_46:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 46 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_55:
+                    //Inform the user the button1 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 55 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+                case R.id.team_b_tile_56:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 56 is clicker", Toast.LENGTH_SHORT ).show();                    break;
+                case R.id.team_b_tile_66:
+                    //Inform the user the button2 has been clicked
+                    Toast.makeText( MainActivity.this, "team_b_tile_ 66 is clicker", Toast.LENGTH_SHORT ).show();
+                    break;
+            }
+
+        }
+    };
+
+
 
 
     @Override
@@ -109,6 +362,7 @@ public class MainActivity extends AppCompatActivity {
         dominoPilesSelectionTeamA = findViewById(R.id.domino_piles_selection_teamA);
         dominoPilesSelectionTeamA.setVisibility(View.GONE);
 
+
         handEndedForTeamA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +377,8 @@ public class MainActivity extends AppCompatActivity {
                 handEndedForTeamB.setVisibility(View.GONE);
 
                 dominoPilesSelectionTeamA.setVisibility(View.VISIBLE);
+
+
 
             }
         });
@@ -158,39 +414,136 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        dominoTile00.setOnClickListener( dominoTileListener);
-        dominoTile01.setOnClickListener( dominoTileListener);
-        dominoTile02.setOnClickListener( dominoTileListener);
-        dominoTile03.setOnClickListener( dominoTileListener);
-        dominoTile04.setOnClickListener( dominoTileListener);
-        dominoTile05.setOnClickListener( dominoTileListener);
-        dominoTile06.setOnClickListener( dominoTileListener);
-        dominoTile11.setOnClickListener( dominoTileListener);
-        dominoTile12.setOnClickListener( dominoTileListener);
-        dominoTile13.setOnClickListener( dominoTileListener);
-        dominoTile14.setOnClickListener( dominoTileListener);
-        dominoTile15.setOnClickListener( dominoTileListener);
-        dominoTile16.setOnClickListener( dominoTileListener);
-        dominoTile22.setOnClickListener( dominoTileListener);
-        dominoTile23.setOnClickListener( dominoTileListener);
-        dominoTile24.setOnClickListener( dominoTileListener);
-        dominoTile25.setOnClickListener( dominoTileListener);
-        dominoTile26.setOnClickListener( dominoTileListener);
-        dominoTile33.setOnClickListener( dominoTileListener);
-        dominoTile34.setOnClickListener( dominoTileListener);
-        dominoTile35.setOnClickListener( dominoTileListener);
-        dominoTile36.setOnClickListener( dominoTileListener);
-        dominoTile44.setOnClickListener( dominoTileListener);
-        dominoTile45.setOnClickListener( dominoTileListener);
-        dominoTile46.setOnClickListener( dominoTileListener);
-        dominoTile55.setOnClickListener( dominoTileListener);
-        dominoTile56.setOnClickListener( dominoTileListener);
-        dominoTile66.setOnClickListener( dominoTileListener);
+
+
+        // Team A views, objects, listeners
+
+        // Assigning the view ids of the domino tile images of Team A to view objects.
+        teamADominoTile00 = findViewById( R.id.team_a_tile_00 );
+        teamADominoTile01 = findViewById( R.id.team_a_tile_01 );
+        teamADominoTile02 = findViewById( R.id.team_a_tile_02 );
+        teamADominoTile03 = findViewById( R.id.team_a_tile_03 );
+        teamADominoTile04 = findViewById( R.id.team_a_tile_04 );
+        teamADominoTile05 = findViewById( R.id.team_a_tile_05 );
+        teamADominoTile06 = findViewById( R.id.team_a_tile_06 );
+        teamADominoTile11 = findViewById( R.id.team_a_tile_11 );
+        teamADominoTile12 = findViewById( R.id.team_a_tile_12 );
+        teamADominoTile13 = findViewById( R.id.team_a_tile_13 );
+        teamADominoTile14 = findViewById( R.id.team_a_tile_14 );
+        teamADominoTile15 = findViewById( R.id.team_a_tile_15 );
+        teamADominoTile16 = findViewById( R.id.team_a_tile_16 );
+        teamADominoTile22 = findViewById( R.id.team_a_tile_22 );
+        teamADominoTile23 = findViewById( R.id.team_a_tile_23 );
+        teamADominoTile24 = findViewById( R.id.team_a_tile_24 );
+        teamADominoTile25 = findViewById( R.id.team_a_tile_25 );
+        teamADominoTile26 = findViewById( R.id.team_a_tile_26 );
+        teamADominoTile33 = findViewById( R.id.team_a_tile_33 );
+        teamADominoTile34 = findViewById( R.id.team_a_tile_34 );
+        teamADominoTile35 = findViewById( R.id.team_a_tile_35 );
+        teamADominoTile36 = findViewById( R.id.team_a_tile_36 );
+        teamADominoTile44 = findViewById( R.id.team_a_tile_44 );
+        teamADominoTile45 = findViewById( R.id.team_a_tile_45 );
+        teamADominoTile46 = findViewById( R.id.team_a_tile_46 );
+        teamADominoTile55 = findViewById( R.id.team_a_tile_55 );
+        teamADominoTile56 = findViewById( R.id.team_a_tile_56 );
+        teamADominoTile66 = findViewById( R.id.team_a_tile_66 );
+
+        // Assigning teamADominoTileListener to domino tile image view of the Team A
+        teamADominoTile00.setOnClickListener( teamADominoTileListener);
+        teamADominoTile01.setOnClickListener( teamADominoTileListener);
+        teamADominoTile02.setOnClickListener( teamADominoTileListener);
+        teamADominoTile03.setOnClickListener( teamADominoTileListener);
+        teamADominoTile04.setOnClickListener( teamADominoTileListener);
+        teamADominoTile05.setOnClickListener( teamADominoTileListener);
+        teamADominoTile06.setOnClickListener( teamADominoTileListener);
+        teamADominoTile11.setOnClickListener( teamADominoTileListener);
+        teamADominoTile12.setOnClickListener( teamADominoTileListener);
+        teamADominoTile13.setOnClickListener( teamADominoTileListener);
+        teamADominoTile14.setOnClickListener( teamADominoTileListener);
+        teamADominoTile15.setOnClickListener( teamADominoTileListener);
+        teamADominoTile16.setOnClickListener( teamADominoTileListener);
+        teamADominoTile22.setOnClickListener( teamADominoTileListener);
+        teamADominoTile23.setOnClickListener( teamADominoTileListener);
+        teamADominoTile24.setOnClickListener( teamADominoTileListener);
+        teamADominoTile25.setOnClickListener( teamADominoTileListener);
+        teamADominoTile26.setOnClickListener( teamADominoTileListener);
+        teamADominoTile33.setOnClickListener( teamADominoTileListener);
+        teamADominoTile34.setOnClickListener( teamADominoTileListener);
+        teamADominoTile35.setOnClickListener( teamADominoTileListener);
+        teamADominoTile36.setOnClickListener( teamADominoTileListener);
+        teamADominoTile44.setOnClickListener( teamADominoTileListener);
+        teamADominoTile45.setOnClickListener( teamADominoTileListener);
+        teamADominoTile46.setOnClickListener( teamADominoTileListener);
+        teamADominoTile55.setOnClickListener( teamADominoTileListener);
+        teamADominoTile56.setOnClickListener( teamADominoTileListener);
+        teamADominoTile66.setOnClickListener( teamADominoTileListener);
+
+
+        // Team B view, objects, listeners
+
+        // Assigning the view ids of the domino tile images of Team B to view objects.
+        teamBDominoTile00 = findViewById( R.id.team_b_tile_00 );
+        teamBDominoTile01 = findViewById( R.id.team_b_tile_01 );
+        teamBDominoTile02 = findViewById( R.id.team_b_tile_02 );
+        teamBDominoTile03 = findViewById( R.id.team_b_tile_03 );
+        teamBDominoTile04 = findViewById( R.id.team_b_tile_04 );
+        teamBDominoTile05 = findViewById( R.id.team_b_tile_05 );
+        teamBDominoTile06 = findViewById( R.id.team_b_tile_06 );
+        teamBDominoTile11 = findViewById( R.id.team_b_tile_11 );
+        teamBDominoTile12 = findViewById( R.id.team_b_tile_12 );
+        teamBDominoTile13 = findViewById( R.id.team_b_tile_13 );
+        teamBDominoTile14 = findViewById( R.id.team_b_tile_14 );
+        teamBDominoTile15 = findViewById( R.id.team_b_tile_15 );
+        teamBDominoTile16 = findViewById( R.id.team_b_tile_16 );
+        teamBDominoTile22 = findViewById( R.id.team_b_tile_22 );
+        teamBDominoTile23 = findViewById( R.id.team_b_tile_23 );
+        teamBDominoTile24 = findViewById( R.id.team_b_tile_24 );
+        teamBDominoTile25 = findViewById( R.id.team_b_tile_25 );
+        teamBDominoTile26 = findViewById( R.id.team_b_tile_26 );
+        teamBDominoTile33 = findViewById( R.id.team_b_tile_33 );
+        teamBDominoTile34 = findViewById( R.id.team_b_tile_34 );
+        teamBDominoTile35 = findViewById( R.id.team_b_tile_35 );
+        teamBDominoTile36 = findViewById( R.id.team_b_tile_36 );
+        teamBDominoTile44 = findViewById( R.id.team_b_tile_44 );
+        teamBDominoTile45 = findViewById( R.id.team_b_tile_45 );
+        teamBDominoTile46 = findViewById( R.id.team_b_tile_46 );
+        teamBDominoTile55 = findViewById( R.id.team_b_tile_55 );
+        teamBDominoTile56 = findViewById( R.id.team_b_tile_56 );
+        teamBDominoTile66 = findViewById( R.id.team_b_tile_66 );
+
+        // Assigning teamBDominoTileListener to domino tile image view of the Team A
+        teamBDominoTile00.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile01.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile02.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile03.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile04.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile05.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile06.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile11.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile12.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile13.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile14.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile15.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile16.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile22.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile23.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile24.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile25.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile26.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile33.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile34.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile35.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile36.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile44.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile45.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile46.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile55.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile56.setOnClickListener( teamBDominoTileListener);
+        teamBDominoTile66.setOnClickListener( teamBDominoTileListener);
 
     }
 
     // calculation and display for team A
-
     public void addFiveForTeamA(View v){
         roundScoreTeamA +=5;
         totalScoreTeamA +=5;
