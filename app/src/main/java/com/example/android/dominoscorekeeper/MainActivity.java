@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     int totalOfTilesInOpponentsHandForTeamA = 0;
     int totalOfTilesInOpponentsHandForTeamB = 0;
 
+    int round = 0;
+
     Button handEndedForTeamA;
     LinearLayout whenGameEndsTeamAWins;
     LinearLayout whenGameEndsTeamALost;
@@ -691,7 +693,6 @@ public class MainActivity extends AppCompatActivity {
         tilesInOpponentsHand.setVisibility( View.VISIBLE );
 
         totalScoreTeamA = roundScoreTeamA + totalOfTilesInOpponentsHandForTeamA;
-        displayTotalScoreForTeamA( totalScoreTeamA );
     }
 
     public void winnerTeamBCollectsOpponentsHand(){
@@ -703,7 +704,6 @@ public class MainActivity extends AppCompatActivity {
         tilesInOpponentsHand.setVisibility( View.VISIBLE );
 
         totalScoreTeamB = roundScoreTeamB + totalOfTilesInOpponentsHandForTeamB;
-        displayTotalScoreForTeamB( totalScoreTeamB );
     }
 
     public void startToNextRound() {
@@ -718,6 +718,15 @@ public class MainActivity extends AppCompatActivity {
 
         handEndedForTeamA.setVisibility( View.VISIBLE );
         handEndedForTeamB.setVisibility( View.VISIBLE );
+
+        displayTotalScoreForTeamA( totalScoreTeamA );
+        displayTotalScoreForTeamB( totalScoreTeamB );
+
+        round +=1;
+        TextView roundNumberForTeamA = (TextView) findViewById(R.id.round_number_team_a);
+        TextView roundNumberForTeamB = (TextView) findViewById( R.id.round_number_team_b );
+        roundNumberForTeamA.setText( String.valueOf( round ) );
+        roundNumberForTeamB.setText( String.valueOf( round ) );
 
         nextRoundButton.setVisibility( View.INVISIBLE );
 
