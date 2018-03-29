@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     int totalScoreTeamA = 0;
     int totalScoreTeamB = 0;
 
-    int opponentsHandForTeamA = 0;
-    int opponentsHandForTeamB = 0;
+    int totalOfTilesInOpponentsHandForTeamA = 0;
+    int totalOfTilesInOpponentsHandForTeamB = 0;
 
     Button handEndedForTeamA;
     LinearLayout whenGameEndsTeamAWins;
@@ -73,116 +73,116 @@ public class MainActivity extends AppCompatActivity {
 
             switch(v.getId()) {
                 case R.id.team_a_tile_00:
-                    opponentsHandForTeamA +=0;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=0;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_01:
-                    opponentsHandForTeamA +=1;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=1;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_02:
-                    opponentsHandForTeamA +=2;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_03:
-                    opponentsHandForTeamA +=3;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_04:
-                    opponentsHandForTeamA +=4;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_05:
-                    opponentsHandForTeamA +=5;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_06:
-                    opponentsHandForTeamA +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_11:
-                    opponentsHandForTeamA +=2;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_12:
-                    opponentsHandForTeamA +=3;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_13:
-                    opponentsHandForTeamA +=4;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_14:
-                    opponentsHandForTeamA +=5;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_15:
-                    opponentsHandForTeamA +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_16:
-                    opponentsHandForTeamA +=7;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_22:
-                    opponentsHandForTeamA +=4;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_23:
-                    opponentsHandForTeamA +=5;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_24:
-                    opponentsHandForTeamA +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_25:
-                    opponentsHandForTeamA +=7;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_26:
-                    opponentsHandForTeamA +=8;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_33:
-                    opponentsHandForTeamA +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_34:
-                    opponentsHandForTeamA +=7;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_35:
-                    opponentsHandForTeamA +=8;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_36:
-                    opponentsHandForTeamA +=9;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_44:
-                    opponentsHandForTeamA +=8;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_45:
-                    opponentsHandForTeamA +=9;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_46:
-                    opponentsHandForTeamA +=10;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_55:
-                    opponentsHandForTeamA +=10;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_56:
-                    opponentsHandForTeamA +=11;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=11;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
                 case R.id.team_a_tile_66:
-                    opponentsHandForTeamA +=12;
-                    displayTotalOfTilesInOpponentsHandForTeamA( opponentsHandForTeamA );
+                    totalOfTilesInOpponentsHandForTeamA +=12;
+                    displayTotalOfTilesInOpponentsHandForTeamA( totalOfTilesInOpponentsHandForTeamA );
                     break;
             }
 
@@ -227,116 +227,116 @@ public class MainActivity extends AppCompatActivity {
 
             switch(v.getId()) {
                 case R.id.team_b_tile_00:
-                    opponentsHandForTeamB +=0;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=0;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_01:
-                    opponentsHandForTeamB +=1;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=1;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_02:
-                    opponentsHandForTeamB +=2;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_03:
-                    opponentsHandForTeamB +=3;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_04:
-                    opponentsHandForTeamB +=4;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_05:
-                    opponentsHandForTeamB +=5;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_06:
-                    opponentsHandForTeamB +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_11:
-                    opponentsHandForTeamB +=2;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=2;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_12:
-                    opponentsHandForTeamB +=3;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=3;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_13:
-                    opponentsHandForTeamB +=4;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_14:
-                    opponentsHandForTeamB +=5;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_15:
-                    opponentsHandForTeamB +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_16:
-                    opponentsHandForTeamB +=7;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_22:
-                    opponentsHandForTeamB +=4;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=4;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_23:
-                    opponentsHandForTeamB +=5;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=5;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_24:
-                    opponentsHandForTeamB +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_25:
-                    opponentsHandForTeamB +=7;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_26:
-                    opponentsHandForTeamB +=8;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_33:
-                    opponentsHandForTeamB +=6;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=6;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_34:
-                    opponentsHandForTeamB +=7;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=7;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_35:
-                    opponentsHandForTeamB +=8;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_36:
-                    opponentsHandForTeamB +=9;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_44:
-                    opponentsHandForTeamB +=8;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=8;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_45:
-                    opponentsHandForTeamB +=9;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=9;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_46:
-                    opponentsHandForTeamB +=10;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_55:
-                    opponentsHandForTeamB +=10;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=10;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_56:
-                    opponentsHandForTeamB +=11;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=11;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
                 case R.id.team_b_tile_66:
-                    opponentsHandForTeamB +=12;
-                    displayTotalOfTilesInOpponentsHandForTeamB( opponentsHandForTeamB );
+                    totalOfTilesInOpponentsHandForTeamB +=12;
+                    displayTotalOfTilesInOpponentsHandForTeamB( totalOfTilesInOpponentsHandForTeamB );
                     break;
             }
 
@@ -390,8 +390,8 @@ public class MainActivity extends AppCompatActivity {
                 handEndedForTeamA.setVisibility(View.GONE);
                 handEndedForTeamB.setVisibility(View.GONE);
 
-                dominoPilesSelectionTeamA.setVisibility(View.VISIBLE);
                 winnerTeamACollectsOpponentsHand();
+                dominoPilesSelectionTeamA.setVisibility(View.VISIBLE);
 
             }
         });
@@ -422,8 +422,8 @@ public class MainActivity extends AppCompatActivity {
                 handEndedForTeamA.setVisibility(View.GONE);
                 handEndedForTeamB.setVisibility(View.GONE);
 
-                dominoPilesSelectionTeamB.setVisibility(View.VISIBLE);
                 winnerTeamBCollectsOpponentsHand();
+                dominoPilesSelectionTeamB.setVisibility(View.VISIBLE);
 
             }
         });
@@ -684,9 +684,42 @@ public class MainActivity extends AppCompatActivity {
 
     public void winnerTeamACollectsOpponentsHand(){
         nextRoundButton.setVisibility( View.VISIBLE );
+        TextView plusSign = (TextView) findViewById( R.id.plus_sign_for_team_a );
+        plusSign.setVisibility( View.VISIBLE );
+
+        TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
+        tilesInOpponentsHand.setVisibility( View.VISIBLE );
+
+        totalScoreTeamA = roundScoreTeamA + totalOfTilesInOpponentsHandForTeamA;
+        displayTotalScoreForTeamA( totalScoreTeamA );
     }
 
     public void winnerTeamBCollectsOpponentsHand(){
         nextRoundButton.setVisibility( View.VISIBLE );
+        TextView plusSign = (TextView) findViewById( R.id.plus_sign_for_team_a );
+        plusSign.setVisibility( View.VISIBLE );
+
+        TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
+        tilesInOpponentsHand.setVisibility( View.VISIBLE );
+
+        totalScoreTeamB = roundScoreTeamB + totalOfTilesInOpponentsHandForTeamB;
+        displayTotalScoreForTeamB( totalScoreTeamB );
+    }
+
+    public void startToNextRound() {
+        TextView plusSignForTeamA = (TextView) findViewById( R.id.plus_sign_for_team_a );
+        plusSignForTeamA.setVisibility( View.GONE );
+
+        TextView plusSignForTeamB = (TextView) findViewById( R.id.plus_sign_for_team_b );
+        plusSignForTeamB.setVisibility( View.GONE );
+
+        dominoPilesSelectionTeamA.setVisibility( View.GONE );
+        dominoPilesSelectionTeamB.setVisibility( View.GONE );
+
+        handEndedForTeamA.setVisibility( View.VISIBLE );
+        handEndedForTeamB.setVisibility( View.VISIBLE );
+
+        nextRoundButton.setVisibility( View.INVISIBLE );
+
     }
 }
