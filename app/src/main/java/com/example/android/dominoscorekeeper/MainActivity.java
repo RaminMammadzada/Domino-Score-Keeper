@@ -617,23 +617,6 @@ public class MainActivity extends AppCompatActivity {
         displayTotalScoreForTeamB(totalScoreTeamB);
     }
 
-    // reset function
-    public void resetAll( View v){
-        roundScoreTeamA = 0;
-        roundScoreTeamB = 0;
-        displayRoundScoreForTeamA(roundScoreTeamA);
-        displayRoundScoreForTeamB(roundScoreTeamB);
-        handEndedForTeamA.setVisibility(View.VISIBLE);
-        handEndedForTeamB.setVisibility(View.VISIBLE);
-        whenGameEndsTeamAWins.setVisibility(View.GONE);
-        whenGameEndsTeamALost.setVisibility(View.GONE);
-        whenGameEndsTeamBWins.setVisibility(View.GONE);
-        whenGameEndsTeamBLost.setVisibility(View.GONE);
-        dominoPilesSelectionTeamA.setVisibility(View.GONE);
-        dominoPilesSelectionTeamB.setVisibility(View.GONE);
-    }
-
-
     /**
      * Displays the given round score for Team A.
      */
@@ -697,16 +680,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void winnerTeamBCollectsOpponentsHand(){
         nextRoundButton.setVisibility( View.VISIBLE );
-        TextView plusSign = (TextView) findViewById( R.id.plus_sign_for_team_a );
+        TextView plusSign = (TextView) findViewById( R.id.plus_sign_for_team_b );
         plusSign.setVisibility( View.VISIBLE );
 
-        TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
+        TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_b );
         tilesInOpponentsHand.setVisibility( View.VISIBLE );
 
         totalScoreTeamB = roundScoreTeamB + totalOfTilesInOpponentsHandForTeamB;
     }
 
-    public void startToNextRound() {
+    public void startToNextRound(Boolean checker) {
         TextView plusSignForTeamA = (TextView) findViewById( R.id.plus_sign_for_team_a );
         plusSignForTeamA.setVisibility( View.GONE );
 
@@ -719,16 +702,57 @@ public class MainActivity extends AppCompatActivity {
         handEndedForTeamA.setVisibility( View.VISIBLE );
         handEndedForTeamB.setVisibility( View.VISIBLE );
 
+        TextView tilesInOpponentsHandForTeamA = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
+        tilesInOpponentsHandForTeamA.setVisibility( View.GONE );
+
+        TextView tilesInOpponentsHandforTeamB = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_b );
+        tilesInOpponentsHandforTeamB.setVisibility( View.GONE );
+
         displayTotalScoreForTeamA( totalScoreTeamA );
         displayTotalScoreForTeamB( totalScoreTeamB );
 
-        round +=1;
-        TextView roundNumberForTeamA = (TextView) findViewById(R.id.round_number_team_a);
-        TextView roundNumberForTeamB = (TextView) findViewById( R.id.round_number_team_b );
-        roundNumberForTeamA.setText( String.valueOf( round ) );
-        roundNumberForTeamB.setText( String.valueOf( round ) );
+        if(checker == false) {
+            round += 1;
+            TextView roundNumberForTeamA = (TextView) findViewById( R.id.round_number_team_a );
+            TextView roundNumberForTeamB = (TextView) findViewById( R.id.round_number_team_b );
+            roundNumberForTeamA.setText( String.valueOf( round ) );
+            roundNumberForTeamB.setText( String.valueOf( round ) );
+        }
 
-        nextRoundButton.setVisibility( View.INVISIBLE );
+
+        totalOfTilesInOpponentsHandForTeamA = 0;
+        totalOfTilesInOpponentsHandForTeamB = 0;
+
+
+        nextRoundButton.setVisibility( View.GONE );
+
+    }
+
+    // reset function
+    public void resetAll( View v){
+        roundScoreTeamA = 0;
+        roundScoreTeamB = 0;
+        totalScoreTeamA = 0;
+        totalScoreTeamB = 0;
+        displayRoundScoreForTeamA(roundScoreTeamA);
+        displayRoundScoreForTeamB(roundScoreTeamB);
+        displayTotalScoreForTeamA( totalScoreTeamA );
+        displayRoundScoreForTeamB( totalScoreTeamB );
+        handEndedForTeamA.setVisibility(View.VISIBLE);
+        handEndedForTeamB.setVisibility(View.VISIBLE);
+        whenGameEndsTeamAWins.setVisibility(View.GONE);
+        whenGameEndsTeamALost.setVisibility(View.GONE);
+        whenGameEndsTeamBWins.setVisibility(View.GONE);
+        whenGameEndsTeamBLost.setVisibility(View.GONE);
+        dominoPilesSelectionTeamA.setVisibility(View.GONE);
+        dominoPilesSelectionTeamB.setVisibility(View.GONE);
+
+        nextRoundButton.setVisibility( View.GONE );
+
+        boolean checker = true;
+        startToNextRound(checker);
+        round = 0;
+        checker = false;
 
     }
 }
