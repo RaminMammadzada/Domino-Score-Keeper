@@ -6,4 +6,6 @@
     <color name="colorForBackground">#03A9F4</color>
     <color name="colorForHead">#1189FF</color>
     <color name="colorForButton">#1191FF</color>
+    <color name="colorForWinner">#FF0000</color>
+    <color name="colorForLooser">#4e342e</color>
 </resources>

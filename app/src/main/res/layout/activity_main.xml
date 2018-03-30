@@ -24,10 +24,12 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp">
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your name"/>
+                    android:text="Team A"
+                    android:gravity="center"
+                    android:textSize="20sp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -185,31 +187,19 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <TextView
                     android:id="@+id/when_round_ends_teamA_wins"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:text="YOU WIN IN THIS ROUND! COLLECT YOUR PILES"
+                    android:textSize="18sp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="YOU WIN IN THIS ROUND! COLLECT YOUR PILES"
-                        android:textSize="10sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
                     android:id="@+id/when_round_ends_teamA_lost"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="YOU LOST IN THIS ROUND!"
-                        android:textSize="20sp"/>
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:text="YOU LOST IN THIS ROUND!"
+                    android:textSize="18sp"/>
 
                 <LinearLayout
                     android:id="@+id/domino_piles_selection_teamA"
@@ -231,10 +221,12 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp">
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your name"/>
+                    android:text="Team B"
+                    android:gravity="center"
+                    android:textSize="20sp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -388,31 +380,19 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <TextView
                     android:id="@+id/when_round_ends_teamB_wins"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:text="YOU WIN IN THIS ROUND! COLLECT YOUR PILES"
+                    android:textSize="18sp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="YOU WIN IN THIS ROUND! COLLECT YOUR PILES"
-                        android:textSize="10sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
                     android:id="@+id/when_round_ends_teamB_lost"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="YOU LOST IN THIS ROUND!"
-                        android:textSize="20sp"/>
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:text="YOU LOST IN THIS ROUND!"
+                    android:textSize="18sp"/>
 
                 <LinearLayout
                     android:id="@+id/domino_piles_selection_teamB"

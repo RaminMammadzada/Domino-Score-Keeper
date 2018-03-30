@@ -1,5 +1,6 @@
 package com.example.android.dominoscorekeeper;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.android.dominoscorekeeper.R;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
     int roundScoreTeamA = 0;
     int roundScoreTeamB = 0;
@@ -23,17 +26,20 @@ public class MainActivity extends AppCompatActivity {
     int totalOfTilesInOpponentsHandForTeamA = 0;
     int totalOfTilesInOpponentsHandForTeamB = 0;
 
-    int round = 0;
+    int round = 1;
+
+    int currentTotalScoreForTeamA = 0;
+    int currentTotalScoreForTeamB = 0;
 
     Button handEndedForTeamA;
-    LinearLayout whenGameEndsTeamAWins;
-    LinearLayout whenGameEndsTeamALost;
+    TextView whenGameEndsTeamAWins;
+    TextView whenGameEndsTeamALost;
     LinearLayout dominoPilesSelectionTeamA;
     LinearLayout dominoPilesSelectionTeamB;
 
     Button handEndedForTeamB;
-    LinearLayout whenGameEndsTeamBWins;
-    LinearLayout whenGameEndsTeamBLost;
+    TextView whenGameEndsTeamBWins;
+    TextView whenGameEndsTeamBLost;
 
     Button nextRoundButton;
 
@@ -358,13 +364,6 @@ public class MainActivity extends AppCompatActivity {
         nextRoundButton = findViewById(R.id.next_round_button);
         nextRoundButton.setVisibility(View.GONE);
 
-        // This if statement check win team is winning the game.
-        if(roundScoreTeamA > roundScoreTeamB){
-            Toast.makeText(this, "Team A wins!", Toast.LENGTH_SHORT).show();
-        } else if(roundScoreTeamA < roundScoreTeamB) {
-            Toast.makeText(this, "Team B wins!", Toast.LENGTH_SHORT).show();
-        }
-
         // Team A staffs
         handEndedForTeamA = findViewById(R.id.hand_ended_for_teamA);
 
@@ -557,6 +556,13 @@ public class MainActivity extends AppCompatActivity {
         teamBDominoTile56.setOnClickListener( teamBDominoTileListener);
         teamBDominoTile66.setOnClickListener( teamBDominoTileListener);
 
+        nextRoundButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startToNextRound();
+            }
+        } );
+
     }
 
     // calculation and display for team A
@@ -565,6 +571,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamA +=5;
         displayRoundScoreForTeamA(roundScoreTeamA);
         displayTotalScoreForTeamA(totalScoreTeamA);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     public void addTenForTeamA(View v){
@@ -572,6 +579,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamA +=10;
         displayRoundScoreForTeamA(roundScoreTeamA);
         displayTotalScoreForTeamA(totalScoreTeamA);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     public void addFifteenForTeamA(View v){
@@ -579,6 +587,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamA +=15;
         displayRoundScoreForTeamA(roundScoreTeamA);
         displayTotalScoreForTeamA(totalScoreTeamA);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     public void addTwentyForTeamA(View v){
@@ -586,6 +595,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamA +=20;
         displayRoundScoreForTeamA(roundScoreTeamA);
         displayTotalScoreForTeamA(totalScoreTeamA);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
     // calculation and display for team B
 
@@ -594,6 +604,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamB +=5;
         displayRoundScoreForTeamB(roundScoreTeamB);
         displayTotalScoreForTeamB(totalScoreTeamB);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     public void addTenForTeamB(View v){
@@ -601,6 +612,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamB +=10;
         displayRoundScoreForTeamB(roundScoreTeamB);
         displayTotalScoreForTeamB(totalScoreTeamB);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     public void addFifteenForTeamB(View v){
@@ -608,6 +620,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamB +=15;
         displayRoundScoreForTeamB(roundScoreTeamB);
         displayTotalScoreForTeamB(totalScoreTeamB);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     public void addTwentyForTeamB(View v){
@@ -615,6 +628,7 @@ public class MainActivity extends AppCompatActivity {
         totalScoreTeamB +=20;
         displayRoundScoreForTeamB(roundScoreTeamB);
         displayTotalScoreForTeamB(totalScoreTeamB);
+        gameOver( totalScoreTeamA, totalScoreTeamB );
     }
 
     /**
@@ -656,6 +670,11 @@ public class MainActivity extends AppCompatActivity {
     public void displayTotalOfTilesInOpponentsHandForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.total_of_tiles_in_opponents_hand_for_team_a);
         scoreView.setText(String.valueOf(score));
+
+        currentTotalScoreForTeamA = totalScoreTeamA + totalOfTilesInOpponentsHandForTeamA;
+
+        // game over function checks if the game is overed or not
+        gameOver(currentTotalScoreForTeamA, currentTotalScoreForTeamB);
     }
 
     /**
@@ -665,6 +684,62 @@ public class MainActivity extends AppCompatActivity {
     public void displayTotalOfTilesInOpponentsHandForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.total_of_tiles_in_opponents_hand_for_team_b);
         scoreView.setText(String.valueOf(score));
+
+        currentTotalScoreForTeamB = totalScoreTeamB + totalOfTilesInOpponentsHandForTeamB;
+
+        // game over function checks if the game is overed or not
+        gameOver(currentTotalScoreForTeamA, currentTotalScoreForTeamB);
+    }
+
+    /**
+     * Displays some text when the game is over. It means when any score of the teams exceeds 250.
+     */
+    @SuppressLint("ResourceAsColor")
+    public void gameOver(int currentTotalA, int currentTotalB){
+
+        // This if statement check win team is winning the game.
+        if(currentTotalA > currentTotalB && currentTotalA > 250){
+            Toast.makeText(this, "Team A wins!", Toast.LENGTH_SHORT).show();
+
+            handEndedForTeamA.setVisibility( View.GONE );
+            handEndedForTeamB.setVisibility( View.GONE );
+
+            whenGameEndsTeamAWins.setText( "GAME IS OVER! YOU ARE A WINNER ! :)" );
+            whenGameEndsTeamAWins.setTextSize( 25 );
+            whenGameEndsTeamAWins.setTextColor( R.color.colorForWinner );
+            whenGameEndsTeamAWins.setVisibility( View.VISIBLE );
+
+            whenGameEndsTeamBLost.setText( "YOU ARE A LOOSER IN THE GAME" );
+            whenGameEndsTeamBLost.setTextSize( 25 );
+            whenGameEndsTeamBLost.setTextColor( R.color.colorForLooser );
+            whenGameEndsTeamBLost.setVisibility( View.VISIBLE );
+
+            nextRoundButton.setVisibility( View.GONE );
+            dominoPilesSelectionTeamA.setVisibility( View.GONE );
+
+        }
+
+
+        // This if statement check win team is winning the game.
+        else if(currentTotalA < currentTotalB && currentTotalB > 250){
+            Toast.makeText(this, "Team B wins!", Toast.LENGTH_SHORT).show();
+
+            handEndedForTeamA.setVisibility( View.GONE );
+            handEndedForTeamB.setVisibility( View.GONE );
+
+            whenGameEndsTeamBWins.setText( "GAME IS OVER! YOU ARE A WINNER ! :)" );
+            whenGameEndsTeamBWins.setTextSize( 25 );
+            whenGameEndsTeamBWins.setTextColor( R.color.colorForWinner );
+            whenGameEndsTeamBWins.setVisibility( View.VISIBLE );
+
+            whenGameEndsTeamALost.setText( "YOU ARE A LOOSER IN THE GAME" );
+            whenGameEndsTeamALost.setTextSize( 25 );
+            whenGameEndsTeamALost.setTextColor( R.color.colorForLooser );
+            whenGameEndsTeamALost.setVisibility( View.VISIBLE );
+
+            nextRoundButton.setVisibility( View.GONE );
+            dominoPilesSelectionTeamB.setVisibility( View.GONE );
+        }
     }
 
     public void winnerTeamACollectsOpponentsHand(){
@@ -674,8 +749,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
         tilesInOpponentsHand.setVisibility( View.VISIBLE );
+        totalOfTilesInOpponentsHandForTeamA = 0;
+        tilesInOpponentsHand.setText(String.valueOf( totalOfTilesInOpponentsHandForTeamA ) );
 
-        totalScoreTeamA = roundScoreTeamA + totalOfTilesInOpponentsHandForTeamA;
     }
 
     public void winnerTeamBCollectsOpponentsHand(){
@@ -685,15 +761,16 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_b );
         tilesInOpponentsHand.setVisibility( View.VISIBLE );
+        totalOfTilesInOpponentsHandForTeamB = 0;
+        tilesInOpponentsHand.setText(String.valueOf( totalOfTilesInOpponentsHandForTeamB ) );
 
-        totalScoreTeamB = roundScoreTeamB + totalOfTilesInOpponentsHandForTeamB;
     }
 
-    public void startToNextRound(Boolean checker) {
-        TextView plusSignForTeamA = (TextView) findViewById( R.id.plus_sign_for_team_a );
+    public void startToNextRound() {
+        TextView plusSignForTeamA = findViewById( R.id.plus_sign_for_team_a );
         plusSignForTeamA.setVisibility( View.GONE );
 
-        TextView plusSignForTeamB = (TextView) findViewById( R.id.plus_sign_for_team_b );
+        TextView plusSignForTeamB = findViewById( R.id.plus_sign_for_team_b );
         plusSignForTeamB.setVisibility( View.GONE );
 
         dominoPilesSelectionTeamA.setVisibility( View.GONE );
@@ -702,29 +779,42 @@ public class MainActivity extends AppCompatActivity {
         handEndedForTeamA.setVisibility( View.VISIBLE );
         handEndedForTeamB.setVisibility( View.VISIBLE );
 
-        TextView tilesInOpponentsHandForTeamA = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
+        TextView tilesInOpponentsHandForTeamA = findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
         tilesInOpponentsHandForTeamA.setVisibility( View.GONE );
 
-        TextView tilesInOpponentsHandforTeamB = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_b );
+        TextView tilesInOpponentsHandforTeamB = findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_b );
         tilesInOpponentsHandforTeamB.setVisibility( View.GONE );
+
+        totalScoreTeamA +=  totalOfTilesInOpponentsHandForTeamA;
+        totalScoreTeamB +=  totalOfTilesInOpponentsHandForTeamB;
 
         displayTotalScoreForTeamA( totalScoreTeamA );
         displayTotalScoreForTeamB( totalScoreTeamB );
 
-        if(checker == false) {
-            round += 1;
-            TextView roundNumberForTeamA = (TextView) findViewById( R.id.round_number_team_a );
-            TextView roundNumberForTeamB = (TextView) findViewById( R.id.round_number_team_b );
-            roundNumberForTeamA.setText( String.valueOf( round ) );
-            roundNumberForTeamB.setText( String.valueOf( round ) );
-        }
+        roundScoreTeamA = 0;
+        roundScoreTeamB = 0;
 
+        displayRoundScoreForTeamA( roundScoreTeamA );
+        displayRoundScoreForTeamB( roundScoreTeamB );
+
+        round += 1;
+        TextView roundNumberForTeamA = findViewById( R.id.round_number_team_a );
+        TextView roundNumberForTeamB = findViewById( R.id.round_number_team_b );
+        roundNumberForTeamA.setText( String.valueOf( round ) );
+        roundNumberForTeamB.setText( String.valueOf( round ) );
 
         totalOfTilesInOpponentsHandForTeamA = 0;
         totalOfTilesInOpponentsHandForTeamB = 0;
 
+        currentTotalScoreForTeamA = 0;
+        currentTotalScoreForTeamB = 0;
 
         nextRoundButton.setVisibility( View.GONE );
+
+        whenGameEndsTeamAWins.setVisibility(View.GONE);
+        whenGameEndsTeamALost.setVisibility(View.GONE);
+        whenGameEndsTeamBWins.setVisibility(View.GONE);
+        whenGameEndsTeamBLost.setVisibility(View.GONE);
 
     }
 
@@ -734,10 +824,17 @@ public class MainActivity extends AppCompatActivity {
         roundScoreTeamB = 0;
         totalScoreTeamA = 0;
         totalScoreTeamB = 0;
+
+        totalOfTilesInOpponentsHandForTeamA = 0;
+        totalOfTilesInOpponentsHandForTeamB = 0;
+
+        currentTotalScoreForTeamA = 0;
+        currentTotalScoreForTeamB = 0;
+
         displayRoundScoreForTeamA(roundScoreTeamA);
         displayRoundScoreForTeamB(roundScoreTeamB);
         displayTotalScoreForTeamA( totalScoreTeamA );
-        displayRoundScoreForTeamB( totalScoreTeamB );
+        displayTotalScoreForTeamB( totalScoreTeamB );
         handEndedForTeamA.setVisibility(View.VISIBLE);
         handEndedForTeamB.setVisibility(View.VISIBLE);
         whenGameEndsTeamAWins.setVisibility(View.GONE);
@@ -749,10 +846,18 @@ public class MainActivity extends AppCompatActivity {
 
         nextRoundButton.setVisibility( View.GONE );
 
-        boolean checker = true;
-        startToNextRound(checker);
         round = 0;
-        checker = false;
+        TextView roundNumberForTeamA = findViewById( R.id.round_number_team_a );
+        roundNumberForTeamA.setText( String.valueOf( round ) );
+        TextView roundNumberForTeamB = findViewById( R.id.round_number_team_b );
+        roundNumberForTeamB.setText( String.valueOf( round ) );
+
+
+        TextView plusSign = (TextView) findViewById( R.id.plus_sign_for_team_a );
+        plusSign.setVisibility( View.GONE );
+
+        TextView tilesInOpponentsHand = (TextView) findViewById( R.id.total_of_tiles_in_opponents_hand_for_team_a );
+        tilesInOpponentsHand.setVisibility( View.GONE );
 
     }
 }
